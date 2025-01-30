@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipWarpDrive : MonoBehaviour
 {
 // set a float value for the speed of the ship entering warp speed   
-float ftlDriveSpeed = 3f;
+float ftlDriveSpeed = 2f;
 //have a boolean value for the warp drive being on and off    
 bool warpDriveOn = false;
     // Start is called before the first frame update
