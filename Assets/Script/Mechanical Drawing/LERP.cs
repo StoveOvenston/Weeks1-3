@@ -25,6 +25,7 @@ public class Bounce : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Makes a variable that is able to switch the ship between going up and down. 
     if (goingUp == true) {   
     t += Time.deltaTime; 
          transform.position = Vector2.Lerp(start, end, t);
@@ -34,6 +35,7 @@ public class Bounce : MonoBehaviour
         transform.position = Vector2.Lerp(end,start,t);
     }
          // Make t a timer so the animation can loop
+        //Swaps boolean at specific points to let the ship "bounce"
          if( t >= 2) {
          t = 0;   
          goingUp = !goingUp;
