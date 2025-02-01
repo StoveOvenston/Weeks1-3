@@ -20,7 +20,8 @@ bool exitWarp = false;
     void Update()
     {
         Vector3 pos = transform.position;
-    if (Input.GetKeyDown(KeyCode.Space))
+   //Detects if space is pressed in order to toggle warpdrive on and off
+        if (Input.GetKeyDown(KeyCode.Space))
     {
          
     warpDriveOn = !warpDriveOn;
@@ -29,18 +30,21 @@ bool exitWarp = false;
    
     if (warpDriveOn == true)
     {
-        ftlDriveSpeed = 3;
+   // Sets the warp drive speed to 3 moving the ship forward     
+    ftlDriveSpeed = 3;
         pos.x += ftlDriveSpeed;
        transform.position = pos;
-        if(pos.x >= 0) {
+      // detects if the ship has reached 0 and then stops (this stopped working after lerp for some reason?)
+       if(pos.x >= 0) {
             ftlDriveSpeed = 0;
             warpDriveOn = false;
         }
     }
-   
+   //Detects if ship has met the conditions to exit warp
     if (pos.x >= 0 && Input.GetKeyDown(KeyCode.Space) ) {
    exitWarp = true;
    }
+  //Moves the ship backwards and then stops it at it's original coordinates'
    if (exitWarp == true) {
    ftlDriveSpeed = 1f;
         pos.x -= ftlDriveSpeed;
