@@ -2946,6 +2946,7 @@ GameObject:
   - component: {fileID: 255217528}
   - component: {fileID: 255217527}
   - component: {fileID: 255217529}
+  - component: {fileID: 255217530}
   m_Layer: 0
   m_Name: Ship Part
   m_TagString: Untagged
@@ -3033,6 +3034,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f16347b58c53a4680d48b93005d533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &255217530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255217526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3653b8212ff34714ebf4876e6fe8760b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 0
+  bounce:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.06388855
+      value: 0.95047
+      inSlope: 0.107517876
+      outSlope: 0.107517876
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9750061
+      value: 1.0484314
+      inSlope: 0.107517876
+      outSlope: 0.107517876
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  start: {x: 0, y: 10}
+  end: {x: 0, y: 0}
 --- !u!1 &265631365
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ public AnimationCurve engine;
 //makes the engine expand while in warp
             t += Time.deltaTime;
             transform.localScale = Vector2.one * engine.Evaluate(t);
-            if (t > 5)
+            if (t > 4)
             {
                 t = 0;
             }
