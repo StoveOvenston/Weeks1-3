@@ -2,24 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseMovement : MonoBehaviour
+public class Bounce : MonoBehaviour
 {
-    [Range(0, 1)]
+    [Range(0, 4)]
     public float t;
     public AnimationCurve bounce;
-  
+  bool goingUp = true;
+ 
     public Vector2 start;
     public Vector2 end;
     // Start is called before the first frame update
     void Start()
     {
-       
+       // MAKE POSITIONS FOR START AND end
+       start = new Vector2(transform.position.x, 0.57f);
+       //set end position
+       end = new Vector2(transform.position.x, 3f);
+    t = 0;
     }
+
 
     // Update is called once per frame
     void Update()
     {
-       
-         transform.position = Vector2.Lerp(start, end, bounce.Evaluate(t));
+    if (goingUp == true) {   
+    t += Time.deltaTime; 
+         transform.position = Vector2.Lerp(start, end, t);
+    }
+    else if (goingUp == false) {
+        t += Time.deltaTime;
+        transform.position = Vector2.Lerp(end,start,t);
+    }
+         // Make t a timer so the animation can loop
+         if( t >= 2) {
+         t = 0;   
+         goingUp = !goingUp;
+         }
     }
 }

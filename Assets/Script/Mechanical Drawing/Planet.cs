@@ -35,7 +35,7 @@ public class Planet : MonoBehaviour
     
         //changes speed depending on warp
         if (warp == true) {
-        speed = 1f;
+        speed = .05f;
     }
     else {
         speed = .01f;

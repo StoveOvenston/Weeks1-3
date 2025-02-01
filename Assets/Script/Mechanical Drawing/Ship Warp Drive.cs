@@ -26,10 +26,10 @@ bool exitWarp = false;
     warpDriveOn = !warpDriveOn;
     
     }
-  
+   
     if (warpDriveOn == true)
     {
-        ftlDriveSpeed = 2;
+        ftlDriveSpeed = 3;
         pos.x += ftlDriveSpeed;
        transform.position = pos;
         if(pos.x >= 0) {
