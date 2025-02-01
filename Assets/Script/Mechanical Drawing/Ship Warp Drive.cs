@@ -50,7 +50,7 @@ bool exitWarp = false;
         pos.x -= ftlDriveSpeed;
         transform.position = pos;
     
-        if(pos.x < -5.85) {
+        if(pos.x < -4) {
           ftlDriveSpeed = 0;
           exitWarp = false;
         }
